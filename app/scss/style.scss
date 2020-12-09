@@ -65,7 +65,7 @@
 .top__content{
     background-repeat: no-repeat;
     background-position: bottom right;
-    height: 495px;
+    padding-bottom: 120px;
     padding-top: 83px;
     &-title{
         max-width: 518px;
@@ -77,6 +77,7 @@
         font-weight: normal;
         font-size: 18px;
         line-height: 28px;
+        margin-bottom: 45px;
     }
     &-btn{
         @include f700;
@@ -104,24 +105,13 @@
         }
     }
 }
-// .powers{
-//     // position: relative;
-// }
-// .powers-list{
-//     position: absolute;
-//     left: 100%;
-//     right: -100%;
-//     top: 100%;
-//     bottom: -71.64%;
-    
-//     // background: linear-gradient(179.61deg, rgba(255, 229, 210, 0.629261) 0.33%, rgba(255, 244, 229, 0.0001) 99.67%);
-//     // transform: rotate(180deg);
-// }
+// SECTION POWERS start
 .powers{
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: bottom center;
     padding-bottom: 90px;
+    margin-bottom: 120px;
     &__title{
         margin: 0 auto;
         text-align: center;
@@ -163,4 +153,68 @@
     width: 180px;
     display: block;
 }
+// SECTION DESIGN start
+.design, .manager, .marketer {
+    &__inner{
+        background-repeat: no-repeat;
+        background-position: top right;
+        padding: 26px 0 50px;
+        margin-bottom: 100px;
+    }
+    &__txt{
+        max-width: 486px;
+        margin-bottom: 30px;
+    }
+    &__subtitle{
+        color: $main-txt;
+    }
+    &__title{
+        text-transform: initial;
+        margin-bottom: 22px;
+    }
+    &__list{
+        max-width: 486px;
+    }
+    &__list-content{
+        margin-bottom: 25px;
+        h6{
+            margin-bottom: 12px;
+        }
+    }
+}
+
+.manager{
+    &__wrapper{
+        img{
+            height: 521px;
+            width: 535px;
+            object-fit: fill;
+            // height: auto;
+            max-width: 100%;
+        }
+    }
+    &__inner{
+        margin: 24px 0 0;
+        padding: 26px 0 150px;
+    }
+    &__txt{
+        margin-bottom: 30px;
+    }
+    &__list{
+        &-content{
+            position: relative;
+            padding-left: 65px;
+            margin-bottom: 30px;
+            &::before{
+                content: url('../images/icons/ok.png');
+                position: absolute;
+                left: 0px;
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}
+
+
 @import 'media';

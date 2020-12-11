@@ -32,3 +32,34 @@ $color-btn: #fff;
     border-radius: 4px;
     cursor: pointer;
 }
+%gradient-bg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+@mixin bubbles {
+    .team__item-txt--right::before,
+    .team__item-txt--right::after,
+    .team__item-txt--left::before,
+    .team__item-txt--left::after{
+        content: "";
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+    }
+    .team__item-txt--right::before,
+    .team__item-txt--left::before
+    {
+        width: 9px;
+        height: 9px;
+        bottom: -14px;
+        right: 7px;
+    }
+    .team__item-txt--right::after,
+    .team__item-txt--left::after{
+        width: 17px;
+        height: 17px;
+        top: 44px;
+        right: 30px;
+    }
+}

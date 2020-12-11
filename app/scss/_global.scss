@@ -46,9 +46,7 @@ a {
 a, label{
     -webkit-tap-highlight-color: transparent;
 }
-button{
-    outline: none;
-}
+
 img {
     display: block;
     border-style: none;
@@ -91,6 +89,7 @@ sub{
 }
 p, span{
     margin: 0;
+    display: block;
 }
 .d-flex {
     display: -webkit-flex;

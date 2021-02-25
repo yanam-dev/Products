@@ -9,6 +9,9 @@
     }
 }
 .logo{
+    margin-top: -10px;
+}
+.logo, .footer-logo{
     position: relative;
     &__img{
         width: 30px;
@@ -27,13 +30,13 @@
         position: absolute;
     }
 }
-.menu{
+.menu, .footer-menu{
     font-size: 14px;
     line-height: 28px;
     margin-left: auto;
     @include f400;
     &__list-item{
-        .menu__list-link{
+        .menu__list-link, .footer-menu__list-link{
             color: $head-font;
         }
     }
@@ -58,11 +61,36 @@
         }
     }
 }
+.menu__btn{
+    width: 35px;
+    height: 20px;
+    display: none;
+    &::before, 
+    &::after{
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 1px;
+        top: 0;
+        background-color: #173A56;
+    }
+    &::before{
+        transform: rotate(135deg);
+        left: 7px;
+        right: 0;
+    }
+    &::after{
+        left: -7px;
+        right: 0;
+        transform: rotate(-135deg);
+    }
+}
 // SECTION TOP start
 .top{
     margin-bottom: 112px;
 }
 .top__content{
+    background-image: url(../images/main-img.svg);
     background-repeat: no-repeat;
     background-position: bottom right;
     padding-bottom: 120px;
@@ -142,7 +170,7 @@
         padding-bottom: 30px;
     }
 }
-.powers__link{
+.powers__link, .footer__form-link{
     text-transform: uppercase;
     @extend %btn-orange;
     @include f700;
@@ -326,7 +354,12 @@
         }
     }
 }
+// SECTION BLOG SLIDER start
 .blog{
+    .container{
+        border-bottom: 1px solid $blue-sky;
+        border-width: 100%;
+    }
     &__title{
         font-size: 34px;
         line-height: 51px;
@@ -336,6 +369,9 @@
         @include f500;
         margin-bottom: 55px;
         display: block;
+    }
+    .slider{
+        margin-bottom: 120px;
     }
     .slider__items{
         margin: 0 -22px;
@@ -396,6 +432,63 @@
 }
 .slick-dots .slick-active button{
     background-color: $orange;
+}
+
+// FOOTER start
+.footer{
+    padding-top: 106px;
+    padding-bottom: 101px;
+    &__inner{
+        flex-wrap: wrap;  
+    }
+    &-menu{
+        flex-direction: column;
+    }
+    &-menu__list{
+        width: 135px;
+    }
+    &-menu__list, .footer__form{
+        flex-direction: column;
+    }
+    &-menu__title{
+        margin-bottom: 30px;
+        padding-top: 2px;
+        @include f500;
+    }
+    &__form{
+        margin-left: auto;
+        &-input{
+            border: 1px solid $blue-sky;
+            border-radius: 4px;
+            height: 48px;
+            width: 330px;
+            margin-bottom: 21px;
+            display: inline-block;
+            padding: 0 15px;
+            &::placeholder{
+                font-size: 16px;
+                line-height: 28px;
+                color: $blue-sky;
+            }
+        }
+        &-link{
+            padding: 8px 15px;
+            text-transform: capitalize;
+            @include f700;
+            border-radius: 4px;
+            margin-left: 0;
+        }
+    }
+}
+.footer__form-title{
+  
+    margin-bottom: 30px;
+    @include f500;
+}
+.grid{
+    max-width: 100%;
+    width: 100%;
+    flex-basis: calc(24% - 15px);
 }
 
 @import 'media';

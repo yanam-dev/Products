@@ -6,4 +6,9 @@ $(function(){
         dots: true,
         arrow: false
       });
+
+     $('.menu__btn').on('click', function(){
+        $('.menu__btn').toggleClass('menu__btn--opened'),
+        $('.menu__list').toggleClass('menu__list--active');
+     }); 
 });
